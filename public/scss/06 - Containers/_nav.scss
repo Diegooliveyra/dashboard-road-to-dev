@@ -1,0 +1,23 @@
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  justify-content: space-between;
+  background-color: $dark-color;
+  padding: $gap-small;
+  min-height: 90vh;
+  border-radius: 20px;
+  & img {
+    margin-top: $gap-smaller;
+    max-width: 60px;
+  }
+  & a {
+    display: block;
+    padding: $gap-smaller $gap-small;
+    & img {
+      max-width: 24px;
+    }
+    
+  }
+}

@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap);
 @font-face {
-  src: url(./../../assets/fonts/baloo-bhai.ttf);
+  src: url(./../assets/fonts/baloo-bhai.ttf);
   font-family: 'baloo-bhai';
 }
 
@@ -64,6 +64,13 @@ table {
 body {
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
   color: #0C0B0B;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100vh;
 }
 
 img {
@@ -75,8 +82,48 @@ a {
   text-decoration: none;
 }
 
+h1 {
+  font-family: 'baloo-bhai';
+}
+
 .container {
-  max-width: 1024px;
+  max-width: 1280px;
   margin: 0 auto;
 }
-/*# sourceMappingURL=mais.css.map */
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #0C0B0B;
+  padding: 20px;
+  min-height: 90vh;
+  border-radius: 20px;
+}
+
+.nav img {
+  margin-top: 10px;
+  max-width: 60px;
+}
+
+.nav a {
+  display: block;
+  padding: 10px 20px;
+}
+
+.nav a img {
+  max-width: 24px;
+}
+/*# sourceMappingURL=main.css.map */

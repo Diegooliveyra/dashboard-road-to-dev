@@ -1,7 +1,10 @@
 body {
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
   color: $dark-color;
- 
+  display: flex;
+  justify-content: space-between;
+  
+  height: 100vh;
 }
 
 img {
@@ -11,4 +14,8 @@ img {
 
 a {
   text-decoration: none;
+}
+
+h1{
+  font-family: 'baloo-bhai';
 }
