@@ -3,8 +3,13 @@ body {
   color: $dark-color;
   display: flex;
   justify-content: space-between;
-  
   height: 100vh;
+  @include device(tablet){
+    flex-direction: column;
+  }
+  @include device(mobile){
+    flex-direction: column;
+  }
 }
 
 img {
