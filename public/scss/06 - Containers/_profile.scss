@@ -1,0 +1,74 @@
+.profile {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  @include device(mobile){
+   flex-direction: column;
+   height: 400px;
+  }
+  &__hellow {
+    flex: 0 0 45%;
+    max-height: 160px;
+    border-radius: 14px;
+    margin-top: $gap-small;
+    display: flex;
+    align-items: center;
+    background-color: $gray-color;
+    position: relative;
+    padding: 0 $gap-small;
+    @include device(mobile){
+      height: 360px;
+      
+     }
+  }
+  & .avatar {
+    position: absolute;
+    right: 50px;
+    top: -30px;
+    @include device(tablet){
+      right: 10px;
+      max-width: 140px;
+      top: 0;
+    }
+  }
+  &__status {
+    flex: 0 0 45%;
+    max-height: 160px;
+    margin-top: $gap-small;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 $gap-small;
+    @include device(tablet){
+      height: 260px;
+    }
+  }
+  &__bar {
+    display: flex;
+    justify-content: space-between;
+    & input {
+      background-color: $gray-color;
+      border-radius: 8px;
+      border: 0;
+      flex: 0 0 60%;
+    }
+  }
+  &__progress {
+    display: flex;
+    justify-content: space-between;
+    & div {
+      background-color: $gray-color;
+      padding: $gap-smaller $gap-small;
+      display: flex;
+      justify-content: centser;
+      align-items: center;
+    }
+    & p {
+      max-width: 100px;
+      margin-left: $gap-smaller;
+    }
+  }
+}
+
+
+

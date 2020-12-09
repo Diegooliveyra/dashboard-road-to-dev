@@ -9,6 +9,7 @@
   margin: 0 $gap-small;
   min-height: 90vh;
   border-radius: 20px;
+  @include box-shadow(2px 3px 25px -3px rgba(0,0,0,0.28));
   & img {
     margin-top: $gap-smaller;
     max-width: 60px;
