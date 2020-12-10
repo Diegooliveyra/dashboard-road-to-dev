@@ -1,13 +1,18 @@
 .profile {
   display: flex;
-  gap: 30px;
+  justify-content: center;
+  gap: $gap-medium;
   width: 100%;
-  @include device(mobile){
-   flex-direction: column;
-   height: 400px;
+  height: 170px;
+  margin-top: $gap-medium;
+  animation: profile-up .8s forwards;
+  @include device(mobile) {
+    flex-direction: column;
+    height: 400px;
+    margin-top: 0;
   }
   &__hellow {
-    flex: 0 0 45%;
+    flex: 0 0 50%;
     max-height: 160px;
     border-radius: 14px;
     margin-top: $gap-small;
@@ -16,59 +21,115 @@
     background-color: $gray-color;
     position: relative;
     padding: 0 $gap-small;
-    @include device(mobile){
+    @include device(mobile) {
       height: 360px;
-      
-     }
+    }
   }
   & .avatar {
     position: absolute;
     right: 50px;
-    top: -30px;
-    @include device(tablet){
+    top: -35px;
+    
+    @include device(tablet) {
       right: 10px;
       max-width: 140px;
       top: 0;
     }
+
+   
+
+    @include device(mobile) {
+      right: 5px;
+      max-width: 100px;
+      top: 50px;
+    }
   }
   &__status {
-    flex: 0 0 45%;
-    max-height: 160px;
+    flex: 0 0 40%;
+    max-height: 150px;
     margin-top: $gap-small;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 0 $gap-small;
-    @include device(tablet){
+    position: relative;
+    @include device(tablet) {
       height: 260px;
     }
   }
   &__bar {
     display: flex;
+    gap: $gap-smaller;
     justify-content: space-between;
+    &::after {
+      content: url(./../assets/search.svg);
+      z-index: 9;
+      display: inline-block;
+      position: absolute;
+      left: 35px;
+      top: $gap-smaller;
+      width: 30px;
+      height: 30px;
+    }
     & input {
       background-color: $gray-color;
       border-radius: 8px;
       border: 0;
-      flex: 0 0 60%;
+      width: 70%;
+      padding: 0 $gap-larger 0 0;
+      position: relative;
+      @include device(tablet) {
+        max-width: 100%;
+      }
+      @include device(mobile) {
+        max-width: 50%;
+      }
+    }
+    & button {
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+      & img {
+        width: 15px;
+      }
     }
   }
   &__progress {
     display: flex;
     justify-content: space-between;
+    gap: $gap-smaller;
+    @include device(mobile) {
+      justify-content: space-around;
+    }
     & div {
       background-color: $gray-color;
       padding: $gap-smaller $gap-small;
       display: flex;
-      justify-content: centser;
+      justify-content: center;
       align-items: center;
+
+      @include device(mobile) {
+        padding: $gap-smaller;
+      }
     }
     & p {
       max-width: 100px;
       margin-left: $gap-smaller;
+      @include device(mobile) {
+        font-size: em(14);
+      }
     }
   }
 }
 
 
-
+@keyframes profile-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -50px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0px, 0);
+  }
+}

@@ -1,53 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../public/css/main.css">
-  <title>Dashboard</title>
-</head>
-<body class="container">
-  <nav class="nav">
-<img src="../public/assets/Logo.svg" alt="Logo F.">
-    <ul>
-      <li><a href="#"><img src="../public/assets/icon_home.svg" alt="Icone Home"></a></li>
-      <li><a href="#"><img src="../public/assets/icon_student.svg" alt="Icone Home"></a></li>
-      <li><a href="#"><img src="../public/assets/icon_avatar.svg" alt="Icone Home"></a></li>
-      <li><a href="#"><img src="../public/assets/icon_email.svg" alt="Icone Home"></a></li>
-      <li><a href="#"><img src="../public/assets/icon_config.svg" alt="Icone Home"></a></li>
-    </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../public/css/main.css" />
+    <title>Dashboard</title>
+  </head>
+  <body class="container">
+    <nav class="nav">
+      <img src="../public/assets/Logo.svg" alt="Logo F." />
+      <ul>
+        <li>
+          <a href="#"
+            ><img src="../public/assets/icon_home.svg" alt="Icone Home"
+          /></a>
+        </li>
+        <li>
+          <a href="#"
+            ><img src="../public/assets/icon_student.svg" alt="Icone Home"
+          /></a>
+        </li>
+        <li>
+          <a href="#"
+            ><img src="../public/assets/icon_avatar.svg" alt="Icone Home"
+          /></a>
+        </li>
+        <li>
+          <a href="#"
+            ><img src="../public/assets/icon_email.svg" alt="Icone Home"
+          /></a>
+        </li>
+        <li>
+          <a href="#"
+            ><img src="../public/assets/icon_config.svg" alt="Icone Home"
+          /></a>
+        </li>
+      </ul>
 
-    <a href="#"><img src="../public/assets/logout.svg" alt="Botão Logout"></a>
-  </nav>
-  
-  <main class="dashboard">
-   <div class="profile">
-     <div class="profile__hellow">
-       <div>
-         <h1 class="title">Hello Josh!</h1>
-         <p>It’s good to see you again.</p>
-       </div>
-       <img class="avatar" src="../public/assets/josh.svg" alt="Avatar Josh">
-     </div>
-     <div class="profile__status">
-       <div class="profile__bar">
-         <input type="text">
-         <img src="../public/assets/alert.svg" alt="Sininho de alerta">
-         <img src="../public/assets/user.png" alt="Usuario">
-       </div>
-       <div class="profile__progress">
-         <div>
-           <h2 class="big-titles">11</h2>
-           <p>Courses completed</p>
-         </div>
-         <div>
-          <h2 class="big-titles">4</h2>
-          <p>Courses in progress</p>
+      <a href="#"
+        ><img src="../public/assets/logout.svg" alt="Botão Logout"
+      /></a>
+    </nav>
+    <div class="dashboard-wrap">
+      <main class="dashboard">
+        <div class="profile">
+          <div class="profile__hellow">
+            <div>
+              <h1 class="title">Hello Josh!</h1>
+              <p>It’s good to see you again.</p>
+            </div>
+            <img
+              class="avatar"
+              src="../public/assets/josh.svg"
+              alt="Avatar Josh"
+            />
+          </div>
+          <div class="profile__status">
+            <div class="profile__bar">
+    
+              <input type="text" />
+              <img src="../public/assets/alert.svg" alt="Sininho de alerta" />
+              <img src="../public/assets/user.png" alt="Usuario" />
+              <button>
+                <img src="../public/assets/arrow_down.svg" alt="Seta Desce">
+              </button>
+            </div>
+            <div class="profile__progress">
+              <div>
+                <h2 class="big-titles">11</h2>
+                <p>Courses completed</p>
+              </div>
+              <div>
+                <h2 class="big-titles">4</h2>
+                <p>Courses in progress</p>
+              </div>
+            </div>
+          </div>
         </div>
-       </div>
-     </div>
-   </div>
-  </main>
-  
-</body>
+        <section class="main">
+          <div class="main__courses">
+            
+          </div>
+          <div class="main__statistics">
+            
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
 </html>

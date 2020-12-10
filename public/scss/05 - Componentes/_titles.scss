@@ -6,4 +6,7 @@
 .big-titles{
   font-family: 'baloo-bhai';
   font-size: 64px;
+  @include device(mobile){
+    font-size: 40px;
+  }
 }

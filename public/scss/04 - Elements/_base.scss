@@ -1,14 +1,7 @@
 body {
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
   color: $dark-color;
-  display: flex;
   height: 100vh;
-  @include device(tablet){
-    flex-direction: column;
-  }
-  @include device(mobile){
-    flex-direction: column;
-  }
 }
 
 img {

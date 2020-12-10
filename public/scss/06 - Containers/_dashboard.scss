@@ -1,7 +1,22 @@
 .dashboard {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: $gap-medium;
+  padding-top: $gap-medium;
   width: 100%;
+}
+
+.dashboard-wrap {
+
+  height: 100vh;
+  margin-left: 100px;
+  @include device(tablet){
+    padding-top: 80px ;
+    margin-left: 0;
+    
+  }
+  @include device(mobile){
+    padding-top: 20px ;
+    margin-left: 0;
+  }
+  
 }

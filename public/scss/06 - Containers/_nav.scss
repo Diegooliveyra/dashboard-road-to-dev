@@ -5,14 +5,22 @@
   align-self: center;
   justify-content: space-between;
   background-color: $dark-color;
-  padding: $gap-small;
-  margin: 0 $gap-small;
+  padding: $gap-smaller;
+  margin: 5vh $gap-small;
   min-height: 90vh;
   border-radius: 20px;
-  @include box-shadow(2px 3px 25px -3px rgba(0,0,0,0.28));
+  position: fixed;
+  z-index: 99;
+  animation: nav-effect .8s forwards;
+  @include box-shadow(2px 3px 25px -3px rgba(0, 0, 0, 0.28));
   & img {
     margin-top: $gap-smaller;
-    max-width: 60px;
+    max-width: 40px;
+    @include device(mobile) {
+      max-width: 30px;
+      margin-top: 0;
+      margin-left: $gap-smaller;
+    }
   }
   & a {
     display: block;
@@ -21,23 +29,36 @@
       max-width: 24px;
     }
   }
-  @include device(tablet){
+  @include device(tablet) {
     flex-direction: row;
     min-height: 0;
     width: 100%;
     border-radius: 0;
+    margin: 0;
     & ul {
       display: flex;
     }
-  };
-  @include device(mobile){
+  }
+  @include device(mobile) {
     flex-direction: row;
     min-height: 0;
     width: 100%;
     border-radius: 0;
+    margin: 0;
     & ul {
       display: none;
     }
   }
- 
+}
+
+
+@keyframes nav-effect {
+  from {
+    opacity: 0;
+    transform: translate3d(-100px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0px, 0);
+  }
 }
