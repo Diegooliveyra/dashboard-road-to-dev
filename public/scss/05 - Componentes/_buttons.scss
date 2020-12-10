@@ -1,0 +1,12 @@
+.btn {
+  padding: $gap-smaller $gap-small;
+  background-color: $dark-color;
+  color: $light-color;
+  border: 1px solid $dark-color;
+  border-radius: 8px;
+  cursor: pointer;
+  @include device(mobile) {
+    font-size: em(14);
+    padding: $gap-smaller;
+   }
+}

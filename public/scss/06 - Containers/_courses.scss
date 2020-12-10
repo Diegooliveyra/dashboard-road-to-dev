@@ -1,0 +1,47 @@
+.courses {
+  flex: 0 0 50%;
+  display: flex;
+  flex-direction: column;
+  &__current {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: $gap-smaller;
+  }
+  &__actual {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $gray-color;
+    padding: $gap-small;
+    border-radius: 14px;
+    flex: 0 0 80%;
+    & p {
+      font-size: em(13);
+      margin-top: 6px;
+    }
+    @include device(tablet) {
+      justify-content: space-around;
+     }
+    @include device(mobile) {
+      flex: 0 0 100%;
+      padding: $gap-smaller;
+      justify-content: space-around;
+      & div {
+        max-width: 80px;
+      }
+     }
+  }
+  &__next{
+    flex: 0 0 20%;
+    display: flex;
+    & button {
+      background-color: transparent;
+      border: 0;
+      cursor: pointer;
+    }
+    @include device(mobile) {
+      display: none;;
+     }
+  }
+}
