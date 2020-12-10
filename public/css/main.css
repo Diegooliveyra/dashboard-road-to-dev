@@ -106,6 +106,11 @@ h1 {
   font-size: 16px;
 }
 
+.subtitle {
+  font-family: 'baloo-bhai';
+  font-size: 24px;
+}
+
 .btn {
   padding: 10px 20px;
   background-color: #0C0B0B;
@@ -578,7 +583,7 @@ h1 {
       -ms-flex-align: center;
           align-items: center;
   background-color: #F5F5F7;
-  padding: 20px;
+  padding: 10px;
   border-radius: 14px;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 80%;
@@ -630,6 +635,91 @@ h1 {
   .courses__next {
     display: none;
   }
+}
+
+.courses__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 30px;
+  -webkit-animation: main-up 1.2s forwards;
+          animation: main-up 1.2s forwards;
+}
+
+.courses__list ul {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+
+.courses__list .courses-nav {
+  font-family: 'baloo-bhai';
+  font-size: 16px;
+  cursor: pointer;
+  color: #949494;
+}
+
+.courses__list .courses-nav li.active {
+  color: #0C0B0B;
+}
+
+.courses__item li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  background-color: #F5F5F7;
+  padding: 10px;
+  border-radius: 14px;
+  font-family: 'Roboto';
+  color: #0C0B0B;
+}
+
+.courses__item li img {
+  max-width: 50px;
+}
+
+.courses__item li p {
+  font-size: 0.875em;
+  margin-top: 6px;
+}
+
+.courses__item li .hours {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 30px;
+}
+
+.courses__item li .rated {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 30px;
+}
+
+.courses__item li .athor {
+  min-width: 150px;
 }
 
 .statistics {

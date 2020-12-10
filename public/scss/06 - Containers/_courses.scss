@@ -2,6 +2,7 @@
   flex: 0 0 50%;
   display: flex;
   flex-direction: column;
+  
   &__current {
     width: 100%;
     display: flex;
@@ -13,7 +14,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: $gray-color;
-    padding: $gap-small;
+    padding: $gap-smaller;
     border-radius: 14px;
     flex: 0 0 80%;
     & p {
@@ -44,4 +45,60 @@
       display: none;;
      }
   }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    margin-top: $gap-medium;
+    
+    animation: main-up 1.2s forwards;
+    & ul {
+      margin-top: $gap-small;
+      display: flex;
+      gap: $gap-small;
+    }
+    & .courses-nav{
+      font-family: 'baloo-bhai';
+      font-size: 16px;
+      cursor: pointer;
+      color: rgb(148, 148, 148);
+      & li.active {
+        color: $dark-color;
+      }
+    }
+  }
+  &__item  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: $gray-color;
+    padding: $gap-smaller;
+    border-radius: 14px;
+    font-family: 'Roboto';
+    color: $dark-color;
+    & img {
+      max-width: 50px;
+    }
+    & p {
+        font-size: em(14);
+        margin-top: 6px;
+      }
+    & .hours {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      height: 30px;
+    }  
+    & .rated {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      height: 30px;
+    }  
+    & .athor {
+      min-width: 150px;
+    }
+  }
 }
+
+
