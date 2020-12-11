@@ -5,8 +5,20 @@
   border: 1px solid $dark-color;
   border-radius: 8px;
   cursor: pointer;
+  font-family: 'Roboto';
   @include device(mobile) {
     font-size: em(14);
     padding: $gap-smaller;
+   }
+   &--white {
+    background-color: transparent;
+    color: $dark-color;
+    font-weight: 700;
+    transition: .2s linear;
+    &:hover {
+      background-color: $dark-color;
+      color: $light-color;
+      font-weight: 400;
+    }
    }
 }

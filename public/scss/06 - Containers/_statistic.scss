@@ -1,4 +1,50 @@
 .statistics {
   flex: 0 0 40%;
-  
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  @include device(tablet){
+    text-align: center;
+    margin-top: $gap-medium;
+  }
+  @include device(mobile){
+    margin-top: $gap-medium;
+  }
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: $gap-small;
+    @include device(tablet){
+      justify-content: center;
+    }
+    & ul {
+      display: flex;
+      gap: $gap-small;
+      font-family: "baloo-bhai";
+      font-size: 16px;
+      cursor: pointer;
+      color: rgb(148, 148, 148);
+      & li.active {
+        color: $dark-color;
+      }
+    }
+    & button {
+      background-color: transparent;
+      border: 0;
+      font-weight: 700;
+      margin-right: $gap-medium;
+      cursor: pointer;
+      &::after {
+        content: url(./../assets/arrow_down.svg);
+        margin-left: $gap-smaller;
+        
+
+      }
+    }
+  }
+  &__grafic {
+    display: flex;
+    justify-content: center;
+  }
 }

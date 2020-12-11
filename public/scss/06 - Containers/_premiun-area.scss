@@ -1,0 +1,20 @@
+.premiun-area {
+  margin-top: $gap-medium;
+  &__section {
+    background-color: $gray-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $gap-medium $gap-small;
+    & p {
+      margin-top: $gap-small;
+      margin-bottom: $gap-medium;
+      max-width: 200px;
+      line-height: 24px;
+    }
+    @include device(tablet){
+      justify-content: center;
+      gap: $gap-larger;
+    }
+  }
+}

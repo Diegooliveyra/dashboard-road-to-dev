@@ -9,37 +9,45 @@
   <body class="container">
     <nav class="nav">
       <img src="../public/assets/Logo.svg" alt="Logo F." />
-      <ul>
-        <li>
-          <a href="#"
-            ><img src="../public/assets/icon_home.svg" alt="Icone Home"
-          /></a>
-        </li>
-        <li>
-          <a href="#"
-            ><img src="../public/assets/icon_student.svg" alt="Icone Home"
-          /></a>
-        </li>
-        <li>
-          <a href="#"
-            ><img src="../public/assets/icon_avatar.svg" alt="Icone Home"
-          /></a>
-        </li>
-        <li>
-          <a href="#"
-            ><img src="../public/assets/icon_email.svg" alt="Icone Home"
-          /></a>
-        </li>
-        <li>
-          <a href="#"
-            ><img src="../public/assets/icon_config.svg" alt="Icone Home"
-          /></a>
-        </li>
-      </ul>
+      
+     <div class="nav__menu">
+       <ul>
+         <li>
+           <a href="#"
+             ><img src="../public/assets/icon_home.svg" alt="Icone Home"
+           /></a>
+         </li>
+         <li>
+           <a href="#"
+             ><img src="../public/assets/icon_student.svg" alt="Icone Home"
+           /></a>
+         </li>
+         <li>
+           <a href="#"
+             ><img src="../public/assets/icon_avatar.svg" alt="Icone Home"
+           /></a>
+         </li>
+         <li>
+           <a href="#"
+             ><img src="../public/assets/icon_email.svg" alt="Icone Home"
+           /></a>
+         </li>
+         <li>
+           <a href="#"
+             ><img src="../public/assets/icon_config.svg" alt="Icone Home"
+           /></a>
+         </li>
+       </ul>
+  
+       <a href="#"
+         ><img src="../public/assets/logout.svg" alt="Botão Logout"
+       /></a>
+     </div>
 
-      <a href="#"
-        ><img src="../public/assets/logout.svg" alt="Botão Logout"
-      /></a>
+      
+      <div class="menu-btn">
+        <div class="menu-btn-burger"></div>
+      </div>
     </nav>
     <div class="dashboard-wrap">
       <main class="dashboard">
@@ -122,7 +130,7 @@
                   <p>4,9</p>
                 </div>
 
-                <button class="btn">Continue</button>
+                <button class="btn btn--white">Continue</button>
                 </li>
               </ul>
               <ul class="courses__item">
@@ -141,7 +149,7 @@
                   <p>4,7</p>
                 </div>
 
-                <button class="btn">Continue</button>
+                <button class="btn btn--white">Continue</button>
                 </li>
               </ul>
               <ul class="courses__item">
@@ -160,7 +168,7 @@
                   <p>4,6</p>
                 </div>
 
-                <button class="btn">Continue</button>
+                <button class="btn btn--white">Continue</button>
                 </li>
               </ul>
               <ul class="courses__item">
@@ -179,7 +187,7 @@
                   <p>4,8</p>
                 </div>
 
-                <button class="btn">Continue</button>
+                <button class="btn btn--white">Continue</button>
                 </li>
               </ul>
               <ul class="courses__item">
@@ -198,13 +206,34 @@
                   <p>4,7</p>
                 </div>
 
-                <button class="btn">Continue</button>
+                <button class="btn btn--white">Continue</button>
                 </li>
               </ul>
             </div>
           </div>
           <div class="statistics">
-            
+            <h3 class="subtitle">Your statistics</h3>
+            <nav class="statistics__nav">
+              <ul >
+                <li class="active">Learning Hours</li>
+                <li>My Courses</li>
+              </ul>
+              <button>Weekly</button>
+            </nav>
+            <div class="statistics__grafic">
+              <img src="../public/assets/statistics.svg" alt="grafico estatistica">
+            </div>
+            <div class="premiun-area">
+              <div class="premiun-area__section">
+                <div class="premiun-area-info">
+                  <h3 class="subtitle">Lern even more!</h3>
+                  <p>Unlock premium features
+                    only for $9.99 per month</p>
+                    <button class="btn">Go Premium</button>
+                </div>
+                <img src="../public/assets/book.svg" alt="imagem livro ilustrado">
+              </div>
+            </div>
           </div>
         </section>
       </main>

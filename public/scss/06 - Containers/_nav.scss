@@ -20,6 +20,7 @@
       max-width: 30px;
       margin-top: 0;
       margin-left: $gap-smaller;
+      padding: $gap-smaller 0;
     }
   }
   & a {
@@ -45,12 +46,91 @@
     width: 100%;
     border-radius: 0;
     margin: 0;
+    animation: profile-up .8s forwards;
+    padding: $gap-small;
     & ul {
+      display: none;
+    }
+  }
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 70vh;
+    @include device(tablet) {
+      flex-direction: row;
+    align-items: center;
+    height: auto;
+    }
+    @include device(mobile) {
       display: none;
     }
   }
 }
 
+.menu-btn {
+  position: relative;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  z-index: 999;
+  margin-right: $gap-smaller;
+  @include device(mobile) {
+    display: flex;
+  }
+}
+
+.menu-btn-burger {
+  width: 35px;
+  height: 4px;
+  background: $light-color;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn-burger::before,
+.menu-btn-burger::after {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 4px;
+  background: $light-color;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn-burger::before {
+  transform: translateY(-12px);
+}
+.menu-btn-burger::after {
+  transform: translateY(12px);
+}
+
+//Animation menu
+
+.menu-btn-open .menu-btn-burger {
+  transform: translateX(-50px);
+  background: transparent;
+}
+
+.menu-btn-open .menu-btn-burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+  background: $gray-color;
+}
+
+.menu-btn-open .menu-btn-burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+  background: $gray-color;
+}
+
+.noscrol {
+  overflow: hidden;
+
+}
 
 @keyframes nav-effect {
   from {

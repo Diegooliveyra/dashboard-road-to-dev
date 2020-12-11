@@ -27,7 +27,6 @@
     @include device(mobile) {
       flex: 0 0 100%;
       padding: $gap-smaller;
-      justify-content: space-around;
       & div {
         max-width: 80px;
       }
@@ -88,12 +87,18 @@
       gap: 5px;
       align-items: center;
       height: 30px;
+      @include device(mobile){
+        display: none;
+      }
     }  
     & .rated {
       display: flex;
       gap: 5px;
       align-items: center;
       height: 30px;
+      @include device(mobile){
+        display: none;
+      }
     }  
     & .athor {
       min-width: 150px;
