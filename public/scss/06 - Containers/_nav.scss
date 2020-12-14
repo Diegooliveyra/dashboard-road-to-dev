@@ -11,7 +11,7 @@
   border-radius: 20px;
   position: fixed;
   z-index: 99;
-  animation: nav-effect .8s forwards;
+  animation: nav-effect 0.8s forwards;
   @include box-shadow(2px 3px 25px -3px rgba(0, 0, 0, 0.28));
   & img {
     margin-top: $gap-smaller;
@@ -46,12 +46,22 @@
     width: 100%;
     border-radius: 0;
     margin: 0;
-    animation: profile-up .8s forwards;
+    animation: profile-up 0.8s forwards;
     padding: $gap-small;
+    align-items: flex-start;
+
     & ul {
       display: none;
     }
   }
+
+  .nav-mobile {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: -300px;
+  }
+
   &__menu {
     display: flex;
     flex-direction: column;
@@ -59,13 +69,28 @@
     height: 70vh;
     @include device(tablet) {
       flex-direction: row;
-    align-items: center;
-    height: auto;
+      align-items: center;
+      height: auto;
     }
     @include device(mobile) {
-      display: none;
+      display: flex;
+      opacity: 0;
+      top: -500px;
+      position: absolute;
+      transition: 1s ease;
     }
   }
+}
+
+.menu-ativo {
+  display: flex;
+  height: 100vh;
+  align-self: flex-start;
+  justify-content: center;
+  transform: translateX(0);
+  position: relative;
+  left: 0;
+  opacity: 1;
 }
 
 .menu-btn {
@@ -79,6 +104,7 @@
   transition: all 0.5s ease-in-out;
   z-index: 999;
   margin-right: $gap-smaller;
+  margin-top: $gap-smaller;
   @include device(mobile) {
     display: flex;
   }
@@ -129,7 +155,6 @@
 
 .noscrol {
   overflow: hidden;
-
 }
 
 @keyframes nav-effect {
