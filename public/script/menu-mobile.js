@@ -3,7 +3,6 @@ export default function menuMobile() {
   const navMenu = document.querySelector("[data-navMenu]");
   const menuUl = document.querySelector("[data-navMenu] ul");
   const allLinksMenu = document.querySelectorAll("[data-navMenu] ul li a");
-  console.log(allLinksMenu);
 
   function menuOpen() {
     btnBurger.classList.toggle("menu-btn-open");

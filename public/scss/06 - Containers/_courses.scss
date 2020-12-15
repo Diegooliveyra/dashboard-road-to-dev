@@ -2,7 +2,7 @@
   flex: 0 0 50%;
   display: flex;
   flex-direction: column;
-  
+
   &__current {
     width: 100%;
     display: flex;
@@ -23,16 +23,16 @@
     }
     @include device(tablet) {
       justify-content: space-around;
-     }
+    }
     @include device(mobile) {
       flex: 0 0 100%;
       padding: $gap-smaller;
       & div {
         max-width: 80px;
       }
-     }
+    }
   }
-  &__next{
+  &__next {
     flex: 0 0 20%;
     display: flex;
     & button {
@@ -41,22 +41,22 @@
       cursor: pointer;
     }
     @include device(mobile) {
-      display: none;;
-     }
+      display: none;
+    }
   }
   &__list {
     display: flex;
     flex-direction: column;
     margin-top: $gap-medium;
-    
+
     animation: main-up 1.2s forwards;
     & ul {
       margin-top: $gap-small;
       display: flex;
       gap: $gap-small;
     }
-    & .courses-nav{
-      font-family: 'baloo-bhai';
+    & .courses-nav {
+      font-family: "baloo-bhai";
       font-size: 16px;
       cursor: pointer;
       color: rgb(148, 148, 148);
@@ -65,45 +65,48 @@
       }
     }
   }
-  &__item  li {
+  &__item {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    background-color: $gray-color;
-    padding: $gap-smaller;
-    border-radius: 14px;
-    font-family: 'Roboto';
-    color: $dark-color;
-    & img {
-      max-width: 50px;
-    }
-    & p {
+    flex-direction: column;
+
+    & li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      background-color: $gray-color;
+      padding: $gap-smaller;
+      border-radius: 14px;
+      font-family: "Roboto";
+      color: $dark-color;
+      & img {
+        max-width: 50px;
+      }
+      & p {
         font-size: em(14);
         margin-top: 6px;
       }
-    & .hours {
-      display: flex;
-      gap: 5px;
-      align-items: center;
-      height: 30px;
-      @include device(mobile){
-        display: none;
+      & .hours {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        height: 30px;
+        @include device(mobile) {
+          display: none;
+        }
       }
-    }  
-    & .rated {
-      display: flex;
-      gap: 5px;
-      align-items: center;
-      height: 30px;
-      @include device(mobile){
-        display: none;
+      & .rated {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        height: 30px;
+        @include device(mobile) {
+          display: none;
+        }
       }
-    }  
-    & .athor {
-      min-width: 150px;
+      & .athor {
+        min-width: 150px;
+      }
     }
   }
 }
-
-
