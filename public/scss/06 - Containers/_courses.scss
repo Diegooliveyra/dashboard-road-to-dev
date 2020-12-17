@@ -108,5 +108,8 @@
         min-width: 150px;
       }
     }
+    & .list-active {
+      animation: main-up .8s forwards;
+    }
   }
 }

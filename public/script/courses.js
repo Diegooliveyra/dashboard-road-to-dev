@@ -1,60 +1,42 @@
-export default function coursesList(){
-  
-  const allCouser = [
+export const listCourses = [
     {
-      logo: 'logo_figma.svg',
-      course: 'Learn Figma',
-      teacher: 'Christopher Morgan',
-      duration: '6h 30min',
-      rated: 4.9
+      logo: "logo_figma.svg",
+      course: "Learn Figma",
+      teacher: "Christopher Morgan",
+      duration: "6h 30min",
+      rated: 4.9,
+      tab: "new",
     },
     {
-      logo: 'logo_instagran.svg',
-      course: 'Learn Figma',
-      teacher: 'Christopher Morgan',
-      duration: '6h 30min',
-      rated: 4.9
+      logo: "logo_analog.svg",
+      course: "Analog photography",
+      teacher: "Gordon Norman",
+      duration: "3h 15min",
+      rated: 4.7,
+      tab: "new",
+    },
+    {
+      logo: "logo_instagran.svg",
+      course: "Master Instagram",
+      teacher: "Sophie Gill ",
+      duration: "7h 40min",
+      rated: 4.6,
+      tab: "pop",
+    },
+    {
+      logo: "logo_pencil.svg",
+      course: "Basics of drawing",
+      teacher: "Jean Tate",
+      duration: "11h 30min",
+      rated: 4.8,
+      tab: "top",
+    },
+    {
+      logo: "logo_photoshop.svg",
+      course: "Photoshop - Essence",
+      teacher: "David Green",
+      duration: "5h 35min",
+      rated: 4.7,
+      tab: "top",
     },
   ];
-
-
-
-
-  // create course
-function createCourse() {
-
-
-  const courses = document.querySelector('[data-courses]')
-  const courseEl = document.createElement("li");
-
-  for(var course of allCouser) {
-    const courseElMarkup = `
-        <img src="../public/assets/${course.logo}" alt="logo curso figma">
-      <div class="athor">
-        <h4 class="title-medium">${course.course}</h4>
-        <p>by ${course.teacher}</p>
-      </div>
-      <div class="hours">
-        <img src="../public/assets/clock.svg" alt="relogio duração curso">
-        <p>${course.duration}</p>
-      </div>
-      <div class="rated">
-        <img src="../public/assets/burn.svg" alt="avaliação do curso">
-        <p>${course.rated}</p>
-      </div>
-  
-      <button class="btn btn--white">Continue</button>
-  
-    `;
-    
-    courseEl.innerHTML = courseElMarkup;
-    console.log(courseEl)
-    courses.append(courseEl);
-  }
-
-  
-  
-}
-createCourse()
-};
-

@@ -913,6 +913,11 @@ h1 {
   min-width: 150px;
 }
 
+.courses__item .list-active {
+  -webkit-animation: main-up .8s forwards;
+          animation: main-up .8s forwards;
+}
+
 .statistics {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 40%;
