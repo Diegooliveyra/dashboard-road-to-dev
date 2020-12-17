@@ -39,6 +39,7 @@
       background-color: transparent;
       border: 0;
       cursor: pointer;
+      outline-style: none;
     }
     @include device(mobile) {
       display: none;

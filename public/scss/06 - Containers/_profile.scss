@@ -62,6 +62,7 @@
     display: flex;
     gap: $gap-smaller;
     justify-content: space-between;
+    position: relative;
     &::after {
       content: url(./../assets/search.svg);
       z-index: 9;
@@ -77,8 +78,9 @@
       border-radius: 8px;
       border: 0;
       width: 70%;
-      padding: 0 $gap-larger 0 0;
+      padding: 0 0 0 $gap-larger ;
       position: relative;
+      outline-style: none;
       @include device(tablet) {
         max-width: 100%;
       }
@@ -90,10 +92,38 @@
       background: transparent;
       border: 0;
       cursor: pointer;
+      outline-style: none;
       & img {
         width: 15px;
       }
     }
+    
+  }
+  &__dropbar {
+    position: absolute;
+    right: 8px;
+    bottom: -70px;
+    width: 180px;
+    height: 180px;
+    z-index: 999999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: $gray-color;
+    @include box-shadow(2px 3px 10px -3px rgba(0, 0, 0, 0.28));
+    animation: main-up .4s forwards;
+    & ul {
+      display: flex;
+      flex-direction: column;
+      & a {
+        display: block;
+        padding: $gap-smaller;
+        color: $dark-color;
+      }
+    }
+  }
+  &__dropbar.active {
+    display: flex;
   }
   &__progress {
     display: flex;
