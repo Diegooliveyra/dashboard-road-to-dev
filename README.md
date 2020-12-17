@@ -25,7 +25,7 @@
 <h4>ℹ️ Pré-requisitos</h4>
 
 <ul>
-    <li><a href="" target="_blank">Git</a></li>
+    <li><a href="https://git-scm.com/" target="_blank">Git</a></li>
 </ul>
 
 <h4>ℹ️ Rodando Projeto</h4>
@@ -44,7 +44,7 @@ $ index.html
 ```
 
 </br>
-<h3 align="center"><a href="https://elated-jackson-d8709d.netlify.app//">🔖 Visite o site 🔖</a></h3>
+<h3 align="center"><a href="https://elated-jackson-d8709d.netlify.app//" target="_blank">🔖 Visite o site 🔖</a></h3>
 </br>
 
 <h3>🖼 Layout</h3>
