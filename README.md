@@ -44,7 +44,7 @@ $ index.html
 ```
 
 </br>
-<h3 align="center"><a href="https://elated-jackson-d8709d.netlify.app//" target="_blank">🔖 Visite o site 🔖</a></h3>
+<h3 align="center"><a href="https://dashboard-roadtodev.netlify.app/" target="_blank">🔖 Visite o site 🔖</a></h3>
 </br>
 
 <h3>🖼 Layout</h3>
